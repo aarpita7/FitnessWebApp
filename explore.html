@@ -1,0 +1,223 @@
+{%extends 'base.html'%}
+
+{%block title%}Explore{%endblock%}
+
+{%block head%}
+  <style>
+    .container{
+      position: relative;
+      top: 100px;
+    }
+    .sample-post {
+      border-radius: 10px;
+      animation: borderAnimation 5s infinite alternate;
+    }
+
+    @keyframes borderAnimation {
+      0% {
+        border-color: #3498db; 
+      }
+      25% {
+        border-color: #e74c3c; 
+      }
+      50% {
+        border-color: #2ecc71; 
+      }
+      75% {
+        border-color: #f39c12; 
+      }
+      100% {
+        border-color: #9b59b6; 
+      }
+    }
+
+    .chat-box {
+      background-color: #3498db; 
+      border: 2px solid transparent; 
+      border-radius: 10px; 
+      overflow: hidden; 
+      animation: pulseBorder 1s infinite alternate; 
+    }
+
+    @keyframes pulseBorder {
+      from {
+        border-color: transparent;
+      }
+      to {
+        border-color: white; 
+      }
+    }
+    .black-scale-grey {
+      background-color: #333;
+      color: #ccc; 
+    }
+  </style>
+{% endblock %}
+
+{%block content%}
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">Sample Post</h5>
+                <p class="card-text">Lorem ipsHJJNKL;IJKLIOKLIOJKOPKatis.</p>
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Image 1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">Sample Post</h5>
+                <p class="card-text">LFTGYHUJKLKJHKLJKHJUKHUJNKJNe venenatis.</p>
+
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Image 2">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">Sample Post</h5>
+                <p class="card-text">LoremCRDGDFCNBGNDFBZDXBDXFB.</p>
+
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Image 3">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">Another Day, Another Adventure</h5>
+                <p class="card-text">Exploring new \\\\\NSCJEWWMFCLSD,VC';SDL.C'AC</p>
+
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Adventure">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">Cozy Day In</h5>
+                <p class="card-text">ReNCERMDNVKTR,BF TTBTBVTRRFDVRFDCV f tea ☕📚</p>
+
+                <div class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Cozy Day In">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-4">
+            <div class="card sample-post">
+              <div class="card-body">
+                <h5 class="card-title">fdnckwjrec🌅</h5>
+                <p class="card-text">Cmw D CKLDMC LDC,DLCture's colors!</p>
+
+                <div                 class="mb-2">
+                  <img src="https://via.placeholder.com/300" class="img-fluid" alt="Sunset Views">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card chat-box">
+          <div class="card-header">
+            Chat
+          </div>
+          <div class="card-body">
+            <!-- Sample Chat -->
+            <div class="d-flex mb-3">
+              <div class="flex-grow-1 chat-message">
+                Arpita : Hello!
+              </div>
+              <div>
+                <small>10:00AM</small>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="flex-grow-1 chat-message">
+                Anushka: Hi there!
+              </div>
+              <div>
+                <small>10:05AM</small>
+              </div>
+            </div>
+           
+            <div class="d-flex mb-3">
+                <div class="flex-grow-1 chat-message">
+                    Tanya: Good morning, folks!
+                </div>
+                <div>
+                    <small>10:35AM</small>
+                </div>
+            </div>
+  
+            <div class="d-flex mb-3">
+              <div class="flex-grow-1 chat-message">
+                Prathmesh: Hi, how's everyone doing today?
+              </div>
+              <div>
+                <small>10:40AM</small>
+              </div>
+            </div>
+  
+            <div class="d-flex mb-3">
+              <div class="flex-grow-1 chat-message">
+                Japjot: Hey there, any interesting plans for the day?
+              </div>
+              <div>
+                <small>10:45AM</small>
+              </div>
+            </div>
+  
+            <div class="d-flex mb-3">
+              <div class="flex-grow-1 chat-message">
+                Sona: Hello, everyone! What's the latest?
+              </div>
+              <div>
+                <small>10:50AM</small>
+              </div>
+            </div>
+  
+            <div class="d-flex mb-3">
+              <div class="flex-grow-1 chat-message">
+                Kripa: Hi, sorry I'm late to the chat!
+              </div>
+              <div>
+                <small>10:55AM</small>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%endblock%}
