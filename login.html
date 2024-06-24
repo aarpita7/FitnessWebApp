@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login / Sign Up Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url('/static/images/cycling.jpg');
+            width:100%;
+            height: 100vh;
+            object-fit: cover;
+		}
+		.container {
+			width: 350px;
+            height: 400px;
+			background-color:rgba(121, 121, 121, 0.616);
+			padding: 20px;
+			margin: 50px auto;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		}
+		.form-title {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.form-group {
+			margin-bottom: 15px;
+		}
+		.form-group label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		.form-group input {
+			width: 95%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+		.form-group input:focus {
+			outline: none;
+			box-shadow: 0px 0px 2px 1px #007bff;
+		}
+		.form-group button {
+			width: 100%;
+			padding: 8px;
+			background-color: #007bff;
+			border: none;
+			color: #fff;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.form-group button:focus {
+			outline: none;
+		}
+		.form-group button:hover {
+			background-color: #0062cc;
+		}
+		.form-group.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+        <form action="/login.html" method="post">
+            <h2 class="form-title">Login / Sign Up on</h2>
+            <h1 class="form-title" style="font-family:Verdana, Geneva, Tahoma, sans-serif">ShapeSync</h1>
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="text" id="username" name="'username" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"/>
+            </div>
+            <div class="form-group">
+                <a href='login.html'><button type="submit" class="btn btn-primary">Login</button></a>
+            </div>
+            <p><a href="signup.html"> Create account </a></p>
+        </form>
+	</div>
+</body>
