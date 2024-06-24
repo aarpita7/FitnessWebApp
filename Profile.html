@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a; /* Dark background color */
+      color: #fff;
+      filter: grayscale(100%);
+    }
+
+    .profile-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333; /* Dark background color */
+      border: 1px solid #555;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-header {
+      flex: 1 30%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      border-right: 1px solid #555;
+      background-color: #2c3e50; /* Midnight Blue */
+      color: #fff;
+      border-radius: 12px 0 0 12px;
+      box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-picture {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-username {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #e74c3c; /* Alizarin Crimson */
+    }
+
+    .profile-details {
+      color: #bbb;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    .profile-bio {
+      color: #ddd;
+      flex-grow: 1;
+      font-size: 1em;
+    }
+
+    .progress-tasks-container {
+      flex: 1 30%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+
+    .today-progress,
+    .tasks {
+      flex: 1;
+      width: 100%;
+      margin-bottom: 20px;
+      background: #2c3e50; /* Midnight Blue */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    .today-progress h2,
+    .tasks h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #3498db; /* Dodger Blue */
+    }
+
+    .progress-item,
+    .task-item {
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .profile-posts {
+      flex: 1 70%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 20px;
+      padding: 30px;
+    }
+
+    .post {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      background-color: #333; /* Dark background color */
+    }
+
+    .post img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .post-caption {
+      padding: 15px;
+      background: #2c3e50; /* Midnight Blue */
+      color: #fff;
+      font-size: 1.2em;
+      border-radius: 0 0 12px 12px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-container">
+  <div class="profile-header">
+    <img class="profile-picture" src="profile-picture.jpg" alt="Profile Picture">
+    <div class="profile-info">
+      <div class="profile-username">inaraartemis</div>
+      <div class="profile-details">Name: Arpita</div>
+      <div class="profile-details">Gender: Female</div>
+      <div class="profile-details">Location: City, Country</div>
+      <div class="profile-details">Email: arp@example.com</div>
+      <div class="profile-details">Joined: January 1, 2024</div>
+      <div class="profile-bio">I am in the mood for health</div>
+    </div>
+  </div>
+
+  <div class="progress-tasks-container">
+    <div class="today-progress">
+      <h2>Today's Progress</h2>
+      <div class="progress-item">Completed coding challenges</div>
+      <div class="progress-item">Reviewed design mockups</div>
+    </div>
+
+    <div class="tasks">
+      <h2>Tasks</h2>
+      <div class="task-item">Finish project proposal</div>
+      <div class="task-item">Prepare for a meeting with the team</div>
+    </div>
+  </div>
+</div>
+
+<div class="profile-posts">
+  <div class="post">
+    <img src="post1.jpg" alt="Post 1">
+    <div class="post-caption">Captivating caption for the first post.</div>
+  </div>
+  <div class="post">
+    <img src="post2.jpg" alt="Post 2">
+    <div class="post-caption">Another engaging caption for the second post.</div>
+  </div>
+</div>
+
+</body>
+</html>
