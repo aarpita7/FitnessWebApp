@@ -1,0 +1,167 @@
+{%  extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block head %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #808080;
+        color: #000000; 
+    }
+
+    .fitness-background {
+        background-image: url('https://images.pexels.com/photos/3601098/pexels-photo-3601098.jpeg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        text-align: center;
+        color: #000000;
+    }
+
+    .quote-heading {
+        font-size: 28px;
+        font-weight: bold;
+        font-style: italic;
+        color: #ffffff; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+
+    .quote-text {
+        font-size: 20px;
+        line-height: 1.5; 
+        color: #ffffff; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; 
+        justify-content: center;
+    }
+
+    .grid-item {
+        background-color: #f0f0f0; 
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .extra-vertical-grid {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .animated-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        animation: animateBorder 5s infinite alternate;
+    }
+
+    @keyframes animateBorder {
+        0% {
+            border-color: #ff0000;
+        }
+        25% {
+            border-color: #00ff00;
+        }
+        50% {
+            border-color: #0000ff;
+        }
+        75% {
+            border-color: #ffff00;
+        }
+        100% {
+            border-color: #ff00ff; 
+        }
+    }
+
+    /* Button Styles */
+    .add-details-button {
+        position: sticky;
+        top: 300px;
+        right: 20px;
+        background-color: #007bff;
+        color: #ffffff; 
+        border: none;
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .add-details-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="fitness-background">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Welcome to our ShapeSync Dashboard!</h2>
+                    <p>We're glad to have you here. Our goal is to help you achieve your fitness goals through personalized workouts, nutrition plans, and support from our community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="add-details-button">Add Today's Progress</button> <!-- Button for adding details -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h3 class="quote-heading">Quote of the Day</h3>
+                <p class="quote-text">"Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come." - Dwayne "The Rock" Johnson</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="grid-container">
+                    <div class="extra-vertical-grid" style="grid-column: 1 / span 1; grid-row: 1 / span 2;">
+                        <h4>Left Sidebar</h4>
+                        <p>This section spans the left sidebar of the dashboard.</p>
+                        <div class="animated-border"></div>
+                    </div>
+                    <div class="grid-item" style="grid-column: 2 / span 2; grid-row: 1 / span 1;">
+                        <h3>Top Left Content</h3>
+                        <p>This section spans the top-left part of the merged box.</p>
+                        <div class="animated-border"></div>
+                    </div>
+                    <div class="grid-item" style="grid-column: 4 / span 2; grid-row: 1 / span 1;">
+                        <h3>Top Right Content</h3>
+                        <p>This section spans the top-right part of the merged box.</p>
+                        <div class="animated-border"></div>
+                    </div>
+                    <div class="grid-item" style="grid-column: 2 / span 2; grid-row: 2 / span 1;">
+                        <h3>Bottom Left Content</h3>
+                        <p>This section spans the bottom-left part of the merged box.</p>
+                        <div class="animated-border"></div>
+                    </div>
+                    <div class="grid-item" style="grid-column: 4 / span 2; grid-row: 2 / span 1;">
+                        <h3>Bottom Right Content</h3>
+                        <p>This section spans the bottom-right part of the merged box.</p>
+                        <div class="animated-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
