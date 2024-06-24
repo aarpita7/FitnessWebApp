@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Agenda{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Black */
+      color: #fff;
+    }
+
+    .agenda-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #000; /* Black */
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .tasks,
+    .reminders {
+      float: left;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #333; /* Dark Gray */
+    }
+
+    .tasks {
+      border-right: 1px solid #555;
+      box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .reminders {
+      box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #3498db; /* Dodger Blue */
+      margin-bottom: 15px;
+    }
+
+    .task-item,
+    .reminder-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .task-item input,
+    .reminder-item input {
+      margin-right: 10px;
+    }
+
+    label {
+      font-size: 1.2em;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="agenda-container">
+    <div class="tasks">
+      <h2>Tasks</h2>
+      <div class="task-item">
+        <input type="checkbox" id="task1">
+        <label for="task1">Complete workout routine</label>
+      </div>
+      <div class="task-item">
+        <input type="checkbox" id="task2">
+        <label for="task2">Prepare healthy meals</label>
+      </div>
+      <!-- Add more task items as needed -->
+    </div>
+  
+    <div class="reminders">
+      <h2>Reminders</h2>
+      <div class="reminder-item">
+        <input type="color" id="reminder1">
+        <label for="reminder1">Drink water every hour</label>
+      </div>
+      <div class="reminder-item">
+        <input type="color" id="reminder2">
+        <label for="reminder2">Take a 10-minute stretch break</label>
+      </div>
+      <!-- Add more reminder items as needed -->
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+{% endblock %}
