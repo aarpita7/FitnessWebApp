@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} ShapeSync {% endblock %}
+
+{% block head %}
+
+<style>
+    body{
+        padding: 0;
+    }
+    .container img{
+        position:relative;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    .overlay {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: 30%;
+        left: 50%;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        z-index: 2; /* Ensure overlay is above image */
+    }
+    #grad{
+        position:absolute;
+        z-index: 1;
+        top:0;
+        background-image: linear-gradient(rgba(155, 155, 155, 0.582),rgba(73, 73, 73, 0.527));
+
+    }
+
+</style>>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <img class="background-image" src="./static/images/baackkk.jpg">
+    <div id="grad"></div>
+    <div class="overlay">
+        <h3>Shape with your Friends</h3>
+        <p>Never underestimate the investment you made on yourself, Get started now</p>
+        <a href='login.html'><button type="button" class="btn btn-dark">Get Started</button></a>
+    </div>
+</div>
+{% endblock %}
